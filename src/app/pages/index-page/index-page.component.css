@@ -1,0 +1,18 @@
+button {
+    border: solid 1px black;
+    width: 70%;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.site-logo {
+    background-image: url("https://www.breakingbelizenews.com/wp-content/uploads/2016/01/running-person-1024x576.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 200px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}

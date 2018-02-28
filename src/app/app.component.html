@@ -2,7 +2,7 @@
 <header id="site-header">
   <div class="container">
 
-    <h1 class="site-title"> Site logo </h1>
+   <h1 class="site-title"><a [routerLink]="['/']">Site logo</a></h1>
 
     <div [ngClass]="{'is-user': user, 'is-anon': anon}">
       <div *ngIf="loading">
@@ -12,13 +12,9 @@
         <a [routerLink]="['/profile']">{{user.username}}</a>
         <button (click)="logout()">logout</button>
       </div>
-      <div *ngIf="!loading && anon">
-        <a [routerLink]="['/login']">login</a>
-        <a [routerLink]="['/signup']">signup</a>
-      </div>
     </div>
     
-    <nav class="site-nav">
+    <nav *ngIf="!loading && !!user" class="site-nav">
       Site nav
     </nav>
 
@@ -31,7 +27,7 @@
 
 <footer id="site-footer">
   <div class="container">
-    nice footer
+    <p>Developed by Luis Herrera, 2018</p>
   </div>
 </footer>
 

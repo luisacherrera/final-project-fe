@@ -12,7 +12,6 @@ body {
     height: 0;
 }
 
-
 /* ---- typography ---- */
 
 body {
@@ -32,20 +31,26 @@ p {
     margin: 0;
 }
 
-
-
 /* ---- layout ---- */
 
 #site-header {
-    padding: 30px 0;
+    padding: 10px 0;
     color: white;
     background: #111;
+    display: flex;
 }
 
 #site-footer {
     color: white;
-    padding: 60px 0;
+    padding: 10px 0;
     background: #111;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#site-footer p {
+    font-size: 12px;
 }
 
 #site-main {
