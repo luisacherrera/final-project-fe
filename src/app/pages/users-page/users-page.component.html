@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Welcome</h1>
+
+  <app-search></app-search>
+
+  <ul>
+    <li *ngFor="let user of users">
+      <app-user-card [user]="user"></app-user-card>
+    </li>
+  </ul>
+</div>

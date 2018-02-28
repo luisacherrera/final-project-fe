@@ -40,6 +40,11 @@ p {
     display: flex;
 }
 
+#site-header button {
+    background-color: white;
+    color: black;
+}
+
 #site-footer {
     color: white;
     padding: 10px 0;

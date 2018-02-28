@@ -30,7 +30,7 @@ export class SignupPageComponent implements OnInit {
         password: this.password
       })
         .then((result) => {
-          this.router.navigate(['/'])
+          this.router.navigate(['/users'])
       //     // ... maybe turn this to false if your're staying on the page - this.processing = false;
         })
         .catch((err) => {
