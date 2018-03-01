@@ -1,18 +1,36 @@
 button {
-    border: solid 1px black;
-    width: 70%;
-    padding: 15px;
-    margin-bottom: 10px;
-    font-size: 14px;
+    border: solid 3px #3C789C;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    margin: 0 20px;
+    font-size: 16px;
     font-weight: 800;
+    background-color: inherit;
+    color: #3C789C;
 }
 
-.site-logo {
-    background-image: url("https://www.breakingbelizenews.com/wp-content/uploads/2016/01/running-person-1024x576.jpg");
+.background {
+    background-image: url("http://www.tuitmagazine.com/contenido/wp-content/uploads/2014/09/jump1.png");
     background-position: center;
-    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(3px);
+    position: fixed;
     width: 100%;
-    padding: 200px 0;
+    height: 650px;
+}
+
+.index-main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    margin-bottom: 30px;
+}
+
+.log-buttons {
+    margin: 0 auto;
+}
+
+h1 {
+    color: #3C789C;
 }

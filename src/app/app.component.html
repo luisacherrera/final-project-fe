@@ -3,11 +3,11 @@
   <div class="container">
    
     <div *ngIf="!user">
-      <h1 class="site-title"><a [routerLink]="['/']">Site logo</a></h1>
+      <h1 class="site-title"><a [routerLink]="['/']">getOUT</a></h1>
     </div>
 
     <div *ngIf="!!user">
-      <h1 class="site-title"><a [routerLink]="['/users']">Site logo</a></h1>
+      <h1 class="site-title"><a [routerLink]="['/users']">getOUT</a></h1>
     </div>
 
     <div [ngClass]="{'is-user': user, 'is-anon': anon}">

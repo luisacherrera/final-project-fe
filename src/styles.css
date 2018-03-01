@@ -36,7 +36,7 @@ p {
 #site-header {
     padding: 10px 0;
     color: white;
-    background: #111;
+    background: #3C789C;
     display: flex;
 }
 
@@ -48,7 +48,8 @@ p {
 #site-footer {
     color: white;
     padding: 10px 0;
-    background: #111;
+    background: #3C789C;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
@@ -68,13 +69,6 @@ p {
 .section {
     margin-bottom: 20px;
     padding-top: 20px;
-}
-
-@media (min-width: 768px) {
-    .container {
-    max-width: 728px;
-    margin: 0 auto;
-    }
 }
 
 /* ---- components ---- */
