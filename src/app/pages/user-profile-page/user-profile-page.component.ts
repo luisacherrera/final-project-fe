@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../../services/users.service';
 import { AuthService } from '../../services/auth.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-profile-page',
@@ -13,11 +13,16 @@ export class UserProfilePageComponent implements OnInit {
   user: Object;
   userId: any;
   currentUser: any;
+  canEditDes = false;
+  canEditInt = false;
+  description: String;
+
 
   constructor(
     private usersService: UsersService,
     private route: ActivatedRoute,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -29,6 +34,22 @@ export class UserProfilePageComponent implements OnInit {
         this.user = user;
       })
     })
+  }
+
+  allowEditDes() {
+    this.canEditDes = true;
+  }
+
+  allowEditInt() {
+    this.canEditInt = true;
+  }
+
+  submitForm(form) {
+    this.usersService.updateUserInfo({
+      description: this.description
+    }, this.user)
+    .then((result)=>
+      this.router.navigate(['/users']))
   }
 
 }

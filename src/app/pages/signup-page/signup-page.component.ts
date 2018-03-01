@@ -12,6 +12,7 @@ export class SignupPageComponent implements OnInit {
   feedbackEnabled = false;
   error = null;
   processing = false;
+  name: String;
   username: String;
   password: String;
   interests: Array<string> = [];
@@ -34,6 +35,7 @@ export class SignupPageComponent implements OnInit {
     if (form.valid) {
       this.processing = true;
       this.authService.signup({
+        name: this.name,
         username: this.username,
         password: this.password,
         interests: this.interests

@@ -2,7 +2,15 @@
   <h2>Sign Up</h2>
 
   <form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
-  
+    
+    <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
+      <label>Name</label>
+      <input type="text" name="name" [(ngModel)]="name" #nameField="ngModel" required [disabled]="processing"/>
+      <div *ngIf="feedbackEnabled && nameField.errors">
+        <p *ngIf="nameField.errors.required" class="validation">name required</p>
+      </div>
+    </div>
+
     <div class="field" [ngClass]="{'has-error': feedbackEnabled && usernameField.errors}">
       <label>Username</label>
       <input type="text" name="username" [(ngModel)]="username" #usernameField="ngModel" required minlength="6" [disabled]="processing"/>
@@ -28,7 +36,8 @@
       <div *ngIf="feedbackEnabled && interestInput.errors">
         <p *ngIf="interestInput.errors.required" class="validation">Interests required</p>
       </div>
-    </div> -->
+    </div> 
+    ON TOP OF THAT, THIS WAY THE INTEREST ON THE INPUT DOES NOT SAVE AUTOMATICALLY-->
 
     <div class="interests">
       <label>List your interests</label>

@@ -17,9 +17,9 @@ export class UsersService {
     .toPromise()
   }
 
-  // searchInterest(): Promise<any> {
-  //   return this.httpClient.post(`${this.API_URL}/users/search`)
-  //   .toPromise()
-  // }
+  updateUserInfo(id, data): Promise<any> {
+    return this.httpClient.post(`${this.API_URL}/users/edit/${id}`, data)
+    .toPromise()
+  }
 
 }

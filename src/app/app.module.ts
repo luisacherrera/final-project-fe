@@ -7,7 +7,6 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 import { AppComponent } from './app.component';
 
-import { SearchComponent } from './components/search/search.component';
 import { UserCardComponent } from './components/user-card/user-card.component';
 
 import { IndexPageComponent } from './pages/index-page/index-page.component';
@@ -36,12 +35,11 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    UserCardComponent,
     IndexPageComponent,
     LoginPageComponent,
     SignupPageComponent,
     UsersPageComponent,
-    SearchComponent,
-    UserCardComponent,
     UserProfilePageComponent
   ],
   imports: [

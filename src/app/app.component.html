@@ -1,8 +1,14 @@
 
 <header id="site-header">
   <div class="container">
+   
+    <div *ngIf="!user">
+      <h1 class="site-title"><a [routerLink]="['/']">Site logo</a></h1>
+    </div>
 
-   <h1 class="site-title"><a [routerLink]="['/']">Site logo</a></h1>
+    <div *ngIf="!!user">
+      <h1 class="site-title"><a [routerLink]="['/users']">Site logo</a></h1>
+    </div>
 
     <div [ngClass]="{'is-user': user, 'is-anon': anon}">
       <div *ngIf="loading">
@@ -13,10 +19,6 @@
         <button (click)="logout()">logout</button>
       </div>
     </div>
-    
-    <nav *ngIf="!loading && !!user" class="site-nav">
-      Site nav
-    </nav>
 
   </div>
 </header>

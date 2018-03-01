@@ -4,12 +4,30 @@
 
 <div class="container" *ngIf="user">
   <img [src]="user.profilepic">
-  <h1>{{ user.username }}</h1>
+  <h1>{{ user.name }}</h1>
+  <h3>More about me: </h3>
+  <p>{{ user.description }}</p>
+  <div *ngIf="canEditDes">
+      <form (ngSubmit)="submitForm(form)">
+        <div class="field">
+          <input type="text" name="description"/>
+        </div>              
+        <div class="field submit">
+          <button type="submit">Submit change</button>
+        </div>
+      </form>
+  </div>
+  <div *ngIf="user._id === currentUser._id"><button (click)="allowEditDes()">Edit</button></div>
+  <h3>My interests: </h3>
   <ul>
     <li *ngFor="let interest of user.interests">
       <p>{{ interest }}</p>
     </li>
   </ul>
-  <div *ngIf="user._id === currentUser._id">Fucktard</div>
+  <div *ngIf="canEditInt">
+    
+  </div>
+  <div *ngIf="user._id === currentUser._id"><button (click)="allowEditInt()">Edit</button></div>
+  <p>Get back to <a [routerLink]="['/users']">users list</a></p>
 </div>
 
