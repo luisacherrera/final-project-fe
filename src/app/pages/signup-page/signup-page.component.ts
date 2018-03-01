@@ -14,10 +14,18 @@ export class SignupPageComponent implements OnInit {
   processing = false;
   username: String;
   password: String;
+  interests: Array<string> = [];
 
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
+  }
+
+  addInterest(interestInput) {
+    const value = interestInput.value;
+    interestInput.value = '';
+
+    this.interests.push(value);
   }
 
   submitForm(form) {
@@ -27,14 +35,14 @@ export class SignupPageComponent implements OnInit {
       this.processing = true;
       this.authService.signup({
         username: this.username,
-        password: this.password
+        password: this.password,
+        interests: this.interests
       })
         .then((result) => {
           this.router.navigate(['/users'])
-      //     // ... maybe turn this to false if your're staying on the page - this.processing = false;
         })
         .catch((err) => {
-          this.error = err.error.error; // :-)
+          this.error = err.error.error;
           this.processing = false;
           this.feedbackEnabled = false;
         });

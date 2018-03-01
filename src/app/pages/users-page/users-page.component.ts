@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../../services/users.service';
+import { AuthService } from '../../services/auth.service';
 import 'rxjs/add/operator/toPromise';
 
 @Component({
@@ -9,11 +10,13 @@ import 'rxjs/add/operator/toPromise';
 })
 export class UsersPageComponent implements OnInit {
   users: Array<any>;
+  currentUser: any;
 
-  constructor(private usersService: UsersService) { }
+  constructor(private usersService: UsersService, private authService: AuthService) { }
 
   ngOnInit() {
-    this.usersService.getUsers()
+    this.currentUser = this.authService.getUser();
+    this.usersService.getUsers(this.currentUser._id)
       .then((users) => {
         this.users = users;
       })

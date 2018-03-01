@@ -9,7 +9,7 @@
         <span class="username text">loading...</span>
       </div>
       <div *ngIf="!loading && !!user">
-        <a [routerLink]="['/profile']">{{user.username}}</a>
+        <a [routerLink]="['/users', user._id]">{{user.username}}</a>
         <button (click)="logout()">logout</button>
       </div>
     </div>

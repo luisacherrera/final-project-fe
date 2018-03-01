@@ -7,9 +7,19 @@ export class UsersService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getUsers(): Promise<any>  {
-    return this.httpClient.get(`${this.API_URL}/users`)
+  getUsers(_id): Promise<any>  {
+    return this.httpClient.get(`${this.API_URL}/users/all/${_id}`)
     .toPromise()
   }
+
+  getSingleUser(id): Promise<any>  {
+    return this.httpClient.get(`${this.API_URL}/users/${id}`)
+    .toPromise()
+  }
+
+  // searchInterest(): Promise<any> {
+  //   return this.httpClient.post(`${this.API_URL}/users/search`)
+  //   .toPromise()
+  // }
 
 }

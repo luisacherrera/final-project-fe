@@ -1,0 +1,15 @@
+<div *ngIf="!user">
+  Loading...
+</div>
+
+<div class="container" *ngIf="user">
+  <img [src]="user.profilepic">
+  <h1>{{ user.username }}</h1>
+  <ul>
+    <li *ngFor="let interest of user.interests">
+      <p>{{ interest }}</p>
+    </li>
+  </ul>
+  <div *ngIf="user._id === currentUser._id">Fucktard</div>
+</div>
+

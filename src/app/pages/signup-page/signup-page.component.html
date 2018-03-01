@@ -20,6 +20,24 @@
         <p *ngIf="passwordField.errors.minlength" class="validation">password is too short</p>
       </div>
     </div>
+
+    <!-- THIS DOES NOT LET ADD MORE THAN ONE INTEREST!!
+    <div class="field" [ngClass]="{'has-error': feedbackEnabled && interestInput.errors}">
+      <label>List your interests</label>
+      <input type="text" placeholder="Interests" name="interests" [(ngModel)]="interests" #interestInput="ngModel" required [disabled]="processing">
+      <div *ngIf="feedbackEnabled && interestInput.errors">
+        <p *ngIf="interestInput.errors.required" class="validation">Interests required</p>
+      </div>
+    </div> -->
+
+    <div class="interests">
+      <label>List your interests</label>
+      <input type="text" placeholder="Interests" #interestInput>
+    </div>
+
+    <div *ngFor="let interest of interests">
+      <p>{{ interest }}</p>
+    </div>
   
     <div class="field submit">
       <button type="submit" [disabled]="processing">Sign Up</button>
@@ -28,6 +46,10 @@
       </div>
     </div>
   </form>
+
+  <p>or</p>
+
+  <button (click)="addInterest(interestInput)">Add another interest</button>
   
   <p>Already have an account? <a [routerLink]="['/login']">Log in Here</a></p>
 </div>
