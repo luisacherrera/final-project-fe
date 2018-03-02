@@ -15,40 +15,65 @@ body {
 /* ---- typography ---- */
 
 body {
-    color: #111;
+    background-color:rgb(212, 216, 222);
+    color: rgb(38, 45, 56);
     font-family: Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 147%;
 }
 
-h1 {}
-
-h2 {}
-
-h3 {}
-
 p {
     margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* ---- layout ---- */
 
 #site-header {
-    padding: 10px 0;
-    color: white;
-    background: #3C789C;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: rgb(212, 216, 222);
+    background: rgb(38, 45, 56);
     display: flex;
 }
 
 #site-header button {
-    background-color: white;
-    color: black;
+    background-color: inherit;
+    color: rgb(212, 216, 222);
+    border: 2px solid rgb(212, 216, 222);
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+#site-header a {
+    color: rgb(212, 216, 222);
+}
+
+.user-log {
+    padding: 20px 0;
+}
+
+.user-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.linkto {
+    padding: 0 15px;
 }
 
 #site-footer {
-    color: white;
-    padding: 10px 0;
-    background: #3C789C;
+    color: rgb(212, 216, 222);
+    padding: 10px 0;    
+    background: rgb(38, 45, 56);
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -62,8 +87,13 @@ p {
     margin-bottom: 60px;
 }
 
+.footer-container {
+    margin: 0 20px;
+}
+
 .container {
     margin: 0 20px;
+    padding-bottom: 60px;
 }
 
 .section {

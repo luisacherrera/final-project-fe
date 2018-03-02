@@ -1,32 +1,39 @@
 
 <header id="site-header">
-  <div class="container">
-   
-    <div *ngIf="!user">
-      <h1 class="site-title"><a [routerLink]="['/']">getOUT</a></h1>
+    
+    <div class="logo">
+      <div *ngIf="!user">
+        <h1 class="site-title"><a [routerLink]="['/']">getOUT</a></h1>
+      </div>
+      <div *ngIf="!!user">
+        <h1 class="site-title"><a [routerLink]="['/users']">getOUT</a></h1>
+      </div>      
     </div>
 
-    <div *ngIf="!!user">
-      <h1 class="site-title"><a [routerLink]="['/users']">getOUT</a></h1>
-    </div>
 
-    <div [ngClass]="{'is-user': user, 'is-anon': anon}">
+    <div class="user-log"[ngClass]="{'is-user': user, 'is-anon': anon}">
+      
       <div *ngIf="loading">
         <span class="username text">loading...</span>
       </div>
-      <div *ngIf="!loading && !!user">
-        <a [routerLink]="['/users', user._id]">{{user.username}}</a>
-        <button (click)="logout()">logout</button>
+
+      <div class="user-links" *ngIf="!loading && !!user">
+        <div class="linkto">
+          <a [routerLink]="['/users', user._id]">{{user.username}}</a>
+        </div>
+        <div class="linkto">
+          <button (click)="logout()">logout</button>
+        </div>
       </div>
+
     </div>
 
-  </div>
 </header>
 
 <router-outlet></router-outlet>
 
 <footer id="site-footer">
-  <div class="container">
+  <div class="footer-container">
     <p>Developed by Luis Herrera, 2018</p>
   </div>
 </footer>

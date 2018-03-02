@@ -1,5 +1,5 @@
 button {
-    border: solid 3px #3C789C;
+    border: solid 3px rgb(38, 45, 56);
     border-radius: 50px;
     width: 100px;
     height: 100px;
@@ -7,13 +7,10 @@ button {
     font-size: 16px;
     font-weight: 800;
     background-color: inherit;
-    color: #3C789C;
+    color: rgb(38, 45, 56);
 }
 
 .background {
-    background-image: url("http://www.tuitmagazine.com/contenido/wp-content/uploads/2014/09/jump1.png");
-    background-position: center;
-    background-size: cover;
     filter: blur(3px);
     position: fixed;
     width: 100%;
@@ -32,5 +29,11 @@ button {
 }
 
 h1 {
-    color: #3C789C;
+    color: rgb(212, 216, 222);
+    padding: 50px;
+}
+
+.site-logo {
+    background-color: rgb(38, 45, 56);
+    margin: 100px 20px;
 }
