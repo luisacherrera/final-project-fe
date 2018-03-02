@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class UserProfilePageComponent implements OnInit {
 
-  user: Object;
+  user: any;
   userId: any;
   currentUser: any;
   canEditDes = false;
@@ -45,9 +45,9 @@ export class UserProfilePageComponent implements OnInit {
   }
 
   submitForm(form) {
-    this.usersService.updateUserInfo({
-      description: this.description
-    }, this.user)
+    const data = {description: this.description};
+
+    this.usersService.updateUserInfo(this.user._id, data)
     .then((result)=>
       this.router.navigate(['/users']))
   }

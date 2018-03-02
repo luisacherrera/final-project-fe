@@ -10,7 +10,7 @@
   <div *ngIf="canEditDes">
       <form (ngSubmit)="submitForm(form)">
         <div class="field">
-          <input type="text" name="description"/>
+          <input type="text" name="description" [(ngModel)]="description"/>
         </div>              
         <div class="field submit">
           <button type="submit">Submit change</button>

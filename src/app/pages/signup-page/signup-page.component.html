@@ -42,6 +42,7 @@
     <div class="interests">
       <label>List your interests</label>
       <input type="text" placeholder="Your interests..." #interestInput>
+      <div id="add-interest" (click)="addInterest(interestInput)">Add another interest</div>
     </div>
 
     <div class="listed-interests" *ngFor="let interest of interests">
@@ -57,8 +58,6 @@
   </form>
 
   <p>or</p>
-
-  <button (click)="addInterest(interestInput)">Add another interest</button>
   
   <p class="alert">Already have an account? <a [routerLink]="['/login']">Log in Here</a></p>
 </div>
