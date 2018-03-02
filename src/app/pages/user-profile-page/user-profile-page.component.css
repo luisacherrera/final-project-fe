@@ -1,3 +1,7 @@
+h1 {
+    font-size: 40px;
+}
+
 .container {
     padding-left: 30px;
 }
@@ -19,4 +23,12 @@ button {
 
 .backhome {
     padding-top: 20px;
+}
+
+.user-interests {
+    text-transform: uppercase; 
+}
+
+ul {
+    list-style-type: none;
 }

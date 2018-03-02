@@ -21,7 +21,7 @@
   <h3>My interests: </h3>
   <ul>
     <li *ngFor="let interest of user.interests">
-      <p>{{ interest }}</p>
+      <p class="user-interests">{{ interest }}</p>
     </li>
   </ul>
   <div *ngIf="canEditInt">
