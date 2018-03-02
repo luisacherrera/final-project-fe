@@ -11,6 +11,9 @@ button {
 }
 
 .background {
+    background-image: url("http://www.tuitmagazine.com/contenido/wp-content/uploads/2014/09/jump1.png");
+    background-position: center;
+    background-size: cover;
     filter: blur(3px);
     position: fixed;
     width: 100%;
@@ -30,10 +33,17 @@ button {
 
 h1 {
     color: rgb(212, 216, 222);
-    padding: 50px;
+    padding: 30px;
+    font-size: 55px;
+}
+
+p {
+    color: rgb(212, 216, 222);
+    padding: 40px;
 }
 
 .site-logo {
     background-color: rgb(38, 45, 56);
-    margin: 100px 20px;
+    margin: 80px auto;
+    border-radius: 50px;
 }
