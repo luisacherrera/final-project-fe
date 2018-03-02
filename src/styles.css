@@ -28,6 +28,7 @@ p {
 
 a {
     text-decoration: none;
+    color: rgb(128, 152, 189);
 }
 
 a:hover {
@@ -122,6 +123,7 @@ form label {
 form input {
   padding: 5px;
   font-size: 16px;
+  background-color: rgb(237, 242, 241);
 }
 
 form .submit {
@@ -132,7 +134,8 @@ form .submit button {
   padding: 5px 20px;
   text-align: center;
   font-size: 16px;
-  background-color: cyan;
+  background-color: rgb(38, 45, 56);
+  color: rgb(212, 216, 222);
   cursor: pointer;
 }
 
