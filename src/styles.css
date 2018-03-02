@@ -38,12 +38,13 @@ a:hover {
 /* ---- layout ---- */
 
 #site-header {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 10px 20px;
     color: rgb(212, 216, 222);
     background: rgb(38, 45, 56);
-    display: flex;
 }
 
 #site-header button {
@@ -94,6 +95,7 @@ a:hover {
 
 .container {
     margin: 0 20px;
+    padding-top: 100px;
     padding-bottom: 60px;
 }
 

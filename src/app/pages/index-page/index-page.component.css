@@ -11,6 +11,7 @@ button {
 }
 
 .background {
+    margin-top: 85px;
     background-image: url("http://www.tuitmagazine.com/contenido/wp-content/uploads/2014/09/jump1.png");
     background-position: center;
     background-size: cover;
@@ -44,6 +45,9 @@ p {
 
 .site-logo {
     background-color: rgb(38, 45, 56);
-    margin: 80px auto;
+    margin-top: 170px;
+    margin-bottom: 80px;
+    margin-right: auto;
+    margin-left:auto;
     border-radius: 50px;
 }
