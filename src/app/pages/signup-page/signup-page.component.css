@@ -46,6 +46,9 @@ button {
     padding: 15px;
     background: transparent;
     border: 1px solid black;
-    border-radius: 10px;
-    
+    border-radius: 20px;
+    margin-top: 20px;
+    max-width: 125px;
+    padding: 10px 20px;
+    font-size: 15px;
 }
