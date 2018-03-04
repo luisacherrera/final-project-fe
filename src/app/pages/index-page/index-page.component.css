@@ -11,7 +11,7 @@ button {
 }
 
 .background {
-    margin-top: 85px;
+    margin-top: 83px;
     background-image: url("http://www.tuitmagazine.com/contenido/wp-content/uploads/2014/09/jump1.png");
     background-position: center;
     background-size: cover;
@@ -26,6 +26,7 @@ button {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding-bottom: 20px;
 }
 
 .log-buttons {
@@ -47,8 +48,14 @@ p {
 .site-logo {
     background-color: rgb(38, 45, 56);
     margin-top: 170px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     margin-right: auto;
     margin-left:auto;
     border-radius: 50px;
+}
+
+img {
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 350px;
 }

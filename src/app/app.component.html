@@ -3,10 +3,10 @@
     
     <div class="logo">
       <div *ngIf="!user">
-        <h1 class="site-title"><a [routerLink]="['/']">gO</a></h1>
+        <a [routerLink]="['/']"><img src="/assets/images/header-logo.png"></a>
       </div>
       <div *ngIf="!!user">
-        <h1 class="site-title"><a [routerLink]="['/users']">gO</a></h1>
+        <a [routerLink]="['/users']"><img src="/assets/images/header-logo.png"></a>
       </div>      
     </div>
 
