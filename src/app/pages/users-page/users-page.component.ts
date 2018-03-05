@@ -11,6 +11,7 @@ import 'rxjs/add/operator/toPromise';
 export class UsersPageComponent implements OnInit {
   users: Array<any>;
   currentUser: any;
+  term: any;
 
   constructor(private usersService: UsersService, private authService: AuthService) { }
 
