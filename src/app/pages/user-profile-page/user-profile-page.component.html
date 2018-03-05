@@ -27,12 +27,12 @@
   <div *ngIf="canEditInt">
     <form (ngSubmit)="submitForm(form)">
       <div class="field">
-        <input type="text" name="description"/>
+        <input type="text" name="interests" [(ngModel)]="interests"/>
       </div>              
       <div class="field submit">
         <button type="submit">Submit change</button>
       </div>
-    </form>   
+    </form>
   </div>
   <div *ngIf="user._id === currentUser._id"><button (click)="allowEditInt()">Edit</button></div>
   <p class="backhome">Get back to <a [routerLink]="['/users']">users list</a></p>

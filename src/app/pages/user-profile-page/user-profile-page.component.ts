@@ -16,8 +16,8 @@ export class UserProfilePageComponent implements OnInit {
   canEditDes = false;
   canEditInt = false;
   description: String;
-
-
+  interests: Array<string>;
+  
   constructor(
     private usersService: UsersService,
     private route: ActivatedRoute,
@@ -45,7 +45,10 @@ export class UserProfilePageComponent implements OnInit {
   }
 
   submitForm(form) {
-    const data = {description: this.description};
+    const data = {
+      description: this.description,
+      interests: this.interests
+    };
 
     this.usersService.updateUserInfo(this.user._id, data)
     .then((result)=>
