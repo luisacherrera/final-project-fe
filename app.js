@@ -1,5 +1,3 @@
-// https://medium.com/@ryanchenkie_40935/angular-cli-deployment-host-your-angular-2-app-on-heroku-3f266f13f352
-
 const express = require('express');
 const path = require('path');
 
