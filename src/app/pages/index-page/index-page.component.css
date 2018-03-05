@@ -4,7 +4,7 @@ button {
     width: 100px;
     height: 100px;
     margin: 0 20px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 800;
     background-color: inherit;
     color: rgb(38, 45, 56);
@@ -27,6 +27,7 @@ button {
     flex-direction: column;
     text-align: center;
     padding-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 .log-buttons {
