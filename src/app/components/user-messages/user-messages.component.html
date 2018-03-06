@@ -1,0 +1,14 @@
+<div *ngIf="!user">
+  Loading...
+</div>
+
+<div *ngIf="user">
+  <ul>
+    <li *ngFor="let message of user.messages">
+      <p>{{ message.owner.name }}</p>
+      <p>{{ message.message }}</p>
+    </li>
+  </ul>  
+</div>
+
+

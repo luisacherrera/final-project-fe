@@ -3,38 +3,13 @@
 </div>
 
 <div class="container" *ngIf="user">
+
   <img [src]="user.profilepic">
   <h1>{{ user.name }}</h1>
-  <h3>More about me: </h3>
-  <p>{{ user.description }}</p>
-  <div *ngIf="canEditDes">
-      <form (ngSubmit)="submitForm(form)">
-        <div class="field">
-          <input type="text" name="description" [(ngModel)]="description"/>
-        </div>              
-        <div class="field submit">
-          <button type="submit">Submit change</button>
-        </div>
-      </form>
-  </div>
-  <div *ngIf="user._id === currentUser._id"><button (click)="allowEditDes()">Edit</button></div>
-  <h3>My interests: </h3>
-  <ul>
-    <li *ngFor="let interest of user.interests">
-      <p class="user-interests">{{ interest }}</p>
-    </li>
-  </ul>
-  <div *ngIf="canEditInt">
-    <form (ngSubmit)="submitForm(form)">
-      <div class="field">
-        <input type="text" name="description"/>
-      </div>              
-      <div class="field submit">
-        <button type="submit">Submit change</button>
-      </div>
-    </form>   
-  </div>
-  <div *ngIf="user._id === currentUser._id"><button (click)="allowEditInt()">Edit</button></div>
-  <p class="backhome">Get back to <a [routerLink]="['/users']">users list</a></p>
+  <button (click)="showInfo()">This will get you back</button>
+  <button (click)="showMessages()">This will destroy you</button>
+  <app-user-info *ngIf="displayInfo && !displayMessages"></app-user-info>
+  <app-user-messages *ngIf="displayMessages && !displayInfo"></app-user-messages>
+
 </div>
 

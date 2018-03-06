@@ -4,22 +4,20 @@ import { AuthService } from '../../services/auth.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-user-profile-page',
-  templateUrl: './user-profile-page.component.html',
-  styleUrls: ['./user-profile-page.component.css']
+  selector: 'app-user-messages',
+  templateUrl: './user-messages.component.html',
+  styleUrls: ['./user-messages.component.css']
 })
-export class UserProfilePageComponent implements OnInit {
+export class UserMessagesComponent implements OnInit {
 
   user: any;
   userId: any;
   currentUser: any;
-  displayInfo = true;
-  displayMessages = false;
 
   constructor(
     private usersService: UsersService,
     private route: ActivatedRoute,
-    private authService: AuthService,
+    private authService: AuthService
   ) { }
 
   ngOnInit() {
@@ -31,16 +29,6 @@ export class UserProfilePageComponent implements OnInit {
         this.user = user;
       })
     })
-  }
-
-  showInfo() {
-    this.displayInfo = true;
-    this.displayMessages = false;
-  }
-
-  showMessages() {
-    this.displayMessages = true;
-    this.displayInfo = false;
   }
 
 }
