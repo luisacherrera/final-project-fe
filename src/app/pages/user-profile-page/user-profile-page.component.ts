@@ -14,6 +14,7 @@ export class UserProfilePageComponent implements OnInit {
   userId: any;
   currentUser: any;
   displayInfo = true;
+  displayMessages = false;
 
   constructor(
     private usersService: UsersService,
@@ -34,9 +35,11 @@ export class UserProfilePageComponent implements OnInit {
 
   showInfo() {
     this.displayInfo = true;
+    this.displayMessages = false;
   }
 
   showMessages() {
+    this.displayMessages = true;
     this.displayInfo = false;
   }
 
