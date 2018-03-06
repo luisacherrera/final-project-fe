@@ -16,7 +16,7 @@ const forceSSL = function () {
   };
 };
 
-// app.use(forceSSL());
+app.use(forceSSL());
 
 app.use(express.static(path.join(__dirname, '/dist')));
 
