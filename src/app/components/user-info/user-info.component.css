@@ -1,0 +1,24 @@
+.container {
+    padding-left: 30px;
+}
+
+button {
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 16px;
+    background-color: rgb(38, 45, 56);
+    color: rgb(212, 216, 222);
+    cursor: pointer;
+}
+
+.backhome {
+    padding-top: 20px;
+}
+
+.user-interests {
+    text-transform: uppercase; 
+}
+
+ul {
+    list-style-type: none;
+}

@@ -1,0 +1,56 @@
+<div *ngIf="!user">
+  Loading...
+</div>
+<div *ngIf="user">
+    <h3>More about me: </h3>
+    <p>{{ user.description }}</p>
+
+    <div *ngIf="user._id === currentUser._id && !canEditDes"><button (click)="allowEditDes()">Edit</button></div>
+
+    <div *ngIf="canEditDes">
+        <form (ngSubmit)="submitForm(form)">
+          <div class="field">
+            <input type="text" name="description" [(ngModel)]="description"/>
+          </div>              
+          <div class="field submit">
+            <button type="submit">Submit change</button>
+          </div>
+        </form>
+    </div>
+
+    <h3>My interests: </h3>
+    <ul>
+      <li *ngFor="let interest of user.interests">
+        <p class="user-interests">{{ interest }}</p>
+      </li>
+    </ul>
+
+    <div *ngIf="user._id === currentUser._id && !canEditInt"><button (click)="allowEditInt()">Edit</button></div>
+
+    <div *ngIf="canEditInt">
+      <form (ngSubmit)="submitForm(form)">
+        <div class="field">
+          <input type="text" name="interests" [(ngModel)]="interests"/>
+        </div>              
+        <div class="field submit">
+          <button type="submit">Submit change</button>
+        </div>
+      </form>
+    </div>
+
+    <div *ngIf="user._id !== currentUser._id"><button (click)="allowSendMessage()">Send message</button></div>
+
+    <div *ngIf="canSendMessage">
+      <form (ngSubmit)="submitMessage(form)">
+        <div class="field">
+          <input type="text" name="message" [(ngModel)]="message"/>
+        </div>              
+        <div class="field submit">
+          <button type="submit">Submit message</button>
+        </div>
+      </form>
+    </div>
+
+    <p class="backhome">Get back to <a [routerLink]="['/users']">users list</a></p>
+</div>    
+

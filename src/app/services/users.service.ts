@@ -23,4 +23,13 @@ export class UsersService {
     .toPromise()
   }
 
+  sendMessage(id, data): Promise<any> {
+    const options = {
+      withCredentials: true
+    };
+
+    return this.httpClient.post(`${this.API_URL}/users/message/${id}`, data, options)
+    .toPromise()
+  }
+
 }

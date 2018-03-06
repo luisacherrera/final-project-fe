@@ -13,16 +13,12 @@ export class UserProfilePageComponent implements OnInit {
   user: any;
   userId: any;
   currentUser: any;
-  canEditDes = false;
-  canEditInt = false;
-  description: String;
-  interests: Array<string>;
-  
+  displayInfo = true;
+
   constructor(
     private usersService: UsersService,
     private route: ActivatedRoute,
     private authService: AuthService,
-    private router: Router
   ) { }
 
   ngOnInit() {
@@ -36,23 +32,12 @@ export class UserProfilePageComponent implements OnInit {
     })
   }
 
-  allowEditDes() {
-    this.canEditDes = true;
+  showInfo() {
+    this.displayInfo = true;
   }
 
-  allowEditInt() {
-    this.canEditInt = true;
-  }
-
-  submitForm(form) {
-    const data = {
-      description: this.description,
-      interests: this.interests
-    };
-
-    this.usersService.updateUserInfo(this.user._id, data)
-    .then((result)=>
-      this.router.navigate(['/users']))
+  showMessages() {
+    this.displayInfo = false;
   }
 
 }

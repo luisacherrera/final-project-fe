@@ -8,6 +8,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { AppComponent } from './app.component';
 
 import { UserCardComponent } from './components/user-card/user-card.component';
+import { UserInfoComponent } from './components/user-info/user-info.component';
 
 import { IndexPageComponent } from './pages/index-page/index-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
@@ -21,6 +22,7 @@ import { UsersService } from './services/users.service';
 import { RequireAnonGuardService } from './guards/require-anon-guard.service';
 import { RequireUserGuardService } from './guards/require-user-guard.service';
 import { InitAuthGuardService } from './guards/init-auth-guard.service';
+import { UserMessagesComponent } from './components/user-messages/user-messages.component';
 
 const routes: Routes = [
   { path: '',  component: IndexPageComponent, canActivate: [ InitAuthGuardService, RequireAnonGuardService ] },
@@ -40,7 +42,9 @@ const routes: Routes = [
     LoginPageComponent,
     SignupPageComponent,
     UsersPageComponent,
-    UserProfilePageComponent
+    UserProfilePageComponent,
+    UserInfoComponent,
+    UserMessagesComponent
   ],
   imports: [
     BrowserModule,
