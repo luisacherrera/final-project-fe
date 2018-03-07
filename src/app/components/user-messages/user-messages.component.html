@@ -5,7 +5,8 @@
 <div *ngIf="user">
 
   <div class="message-container" *ngFor="let message of user.messages">
-    <p>{{ message.owner.name }}</p>
+    <img [src]="message.owner.profilepic">
+    <h3>{{ message.owner.name }}</h3>
     <p>{{ message.message }}</p>
     <a [routerLink]="['/users', message.owner._id]" (click)="hideMessages()">Go to user page</a>
   </div>

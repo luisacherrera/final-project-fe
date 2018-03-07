@@ -10,10 +10,10 @@ input {
 }
 
 .user-card {
-    border: 1px solid black;
+    border: 1px solid rgb(85, 100, 125);
     border-radius: 10px;
     max-width: 500px;
-    box-shadow: 5px 5px;
+    box-shadow: 5px 5px rgb(85, 100, 125);
     margin-bottom: 20px;
 }
 
