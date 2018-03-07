@@ -67,4 +67,14 @@ export class AuthService {
   getUser(): any {
     return this.user;
   }
+
+  updateUserInfo(id, data): Promise<any> {
+    const options = {
+      withCredentials: true
+    };
+
+    return this.httpClient.post(`${this.API_URL}/edit/${id}`, data, options)
+    .toPromise()
+    .then((user) => this.setUser(user))
+  }
 }

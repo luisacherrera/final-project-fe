@@ -18,11 +18,6 @@ export class UsersService {
     .toPromise()
   }
 
-  updateUserInfo(id, data): Promise<any> {
-    return this.httpClient.post(`${this.API_URL}/users/edit/${id}`, data)
-    .toPromise()
-  }
-
   sendMessage(id, data): Promise<any> {
     const options = {
       withCredentials: true

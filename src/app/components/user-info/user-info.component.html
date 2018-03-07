@@ -40,15 +40,15 @@
       </form>
     </div>
 
-    <div *ngIf="user._id !== currentUser._id"><button (click)="allowSendMessage()">Send message</button></div>
+    <div *ngIf="user._id !== currentUser._id && !canSendMessage"><button (click)="allowSendMessage()">Send message</button></div>
 
     <div *ngIf="canSendMessage">
       <form (ngSubmit)="submitMessage(form)">
         <div class="field">
-          <input type="text" name="message" [(ngModel)]="message"/>
+          <textarea type="text" name="message" [(ngModel)]="message"></textarea>
         </div>              
         <div class="field submit">
-          <button type="submit">Submit message</button>
+          <button type="submit">Send message</button>
         </div>
       </form>
     </div>

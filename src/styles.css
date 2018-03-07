@@ -122,17 +122,6 @@ form label {
 	font-style: bold;
 }
 
-form input {
-  padding: 5px;
-  font-size: 16px;
-  background-color: rgb(237, 242, 241);
-}
-
-input {
-    width: 250px;
-    border-radius: 15px;
-}
-
 form .submit {
   padding-top: 20px;
 }
@@ -157,4 +146,30 @@ form .validation {
 
 form .field.has-error input {
 	border: 1px solid  red;
+}
+
+input {
+    width: 250px;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 16px;
+    background-color: rgb(237, 242, 241);
+}
+
+textarea {
+    width: 310px;
+    height: 100px;
+    margin-left: 10px;
+    border-radius: 15px;
+    padding: 5px;
+    font-size: 16px;
+    background-color: rgb(237, 242, 241);
+    border: 2px inset;
+}
+
+@media (min-width: 500px) {
+    textarea {
+        width: 400px;
+        margin-left: 20px;
+    }
 }

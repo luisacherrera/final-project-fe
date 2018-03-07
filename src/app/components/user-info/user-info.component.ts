@@ -56,9 +56,13 @@ export class UserInfoComponent implements OnInit {
       interests: this.interests
     };
 
-    this.usersService.updateUserInfo(this.user._id, data)
-    .then((result)=>
-      this.router.navigate(['/users']))
+    this.authService.updateUserInfo(this.user._id, data)
+    .then((result)=> {
+      this.canEditDes = false;
+      this.canEditInt = false;
+      this.user = this.authService.getUser()
+    })
+      // this.router.navigate(['/users']))
   }
 
   submitMessage(form) {
