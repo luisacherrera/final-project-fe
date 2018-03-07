@@ -1,0 +1,27 @@
+.users-container {
+    padding: 20px;
+}
+
+input {
+    height: 31px;
+    font-size: 15px;
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+.user-card {
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: 500px;
+    box-shadow: 5px 5px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+
+    .container {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

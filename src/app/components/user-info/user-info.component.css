@@ -9,6 +9,7 @@ button {
     background-color: rgb(38, 45, 56);
     color: rgb(212, 216, 222);
     cursor: pointer;
+    border-radius: 15px;
 }
 
 .backhome {
@@ -21,4 +22,9 @@ button {
 
 ul {
     list-style-type: none;
+}
+
+.user-description {
+    padding: 20px;
+    margin-bottom: 15px;
 }

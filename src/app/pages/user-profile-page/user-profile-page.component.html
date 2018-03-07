@@ -4,10 +4,16 @@
 
 <div class="container" *ngIf="user">
 
-  <img [src]="user.profilepic">
-  <h1>{{ user.name }}</h1>
-  <button (click)="showInfo()">This will get you back</button>
-  <button (click)="showMessages()">This will destroy you</button>
+  <div class="profile-header">
+    <img [src]="user.profilepic">
+    <h1>{{ user.name }}</h1>  
+  </div>
+
+  <div class="navigating-buttons" *ngIf="user._id === currentUser._id">
+    <div class="goTo" tabindex="1" (click)="showInfo()">My info</div>
+    <div class="goTo" tabindex="2" (click)="showMessages()">My messages</div>  
+  </div>
+
   <app-user-info *ngIf="displayInfo && !displayMessages"></app-user-info>
   <app-user-messages *ngIf="displayMessages && !displayInfo"></app-user-messages>
 

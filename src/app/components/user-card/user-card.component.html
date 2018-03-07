@@ -1,5 +1,12 @@
-<p>{{ user.username }}</p>
+<div class="card-container">
+  <img [src]="user.profilepic">
+  <h3>{{ user.username }}</h3>  
+</div>
+
 <ul class="tohide">
   <li *ngFor="let interest of user.interests | filter:term"></li>
 </ul>
-<a [routerLink]="['/users', user._id]">Go to detail</a>
+
+<div class="route-container">
+  <a [routerLink]="['/users', user._id]">Go to detail</a>  
+</div>

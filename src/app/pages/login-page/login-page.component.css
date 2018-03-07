@@ -8,4 +8,19 @@ p {
 
 .container {
     padding-left: 30px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    padding: 5px 20px;
+    text-align: center;
+    font-size: 16px;
+    background-color: rgb(38, 45, 56);
+    color: rgb(212, 216, 222);
+    cursor: pointer;
+    max-width: 250px;
+    height: 40px;
+    border-radius: 20px;
 }

@@ -12,6 +12,9 @@ p {
 
 .container {
     padding-left: 30px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button {
@@ -21,6 +24,9 @@ button {
     background-color: rgb(38, 45, 56);
     color: rgb(212, 216, 222);
     cursor: pointer;
+    width: 250px;
+    height: 40px;
+    border-radius: 20px;
 }
 
 .interests {
@@ -32,14 +38,14 @@ button {
     color: rgb(97, 99, 99);
     border: 2px solid black;
     border-radius: 30px;
-    max-width: 100px;
+    max-width: 80px;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 10px;
 }
 
 .listed-interests p {
-    padding: 10px;
+    padding: 5px;
 }
 
 #add-interest {
@@ -48,8 +54,8 @@ button {
     color: rgb(212, 216, 222);
     border: 1px solid black;
     border-radius: 20px;
-    margin-top: 20px;
-    max-width: 110px;
-    padding: 10px 20px;
+    margin-top: 30px;
+    max-width: 90px;
+    padding: 5px 10px;
     font-size: 12px;
 }

@@ -3,14 +3,16 @@
 </div>
 <div *ngIf="user">
     <h3>More about me: </h3>
-    <p>{{ user.description }}</p>
-
+    <div class="user-description">
+      <p>{{ user.description }}</p>  
+    </div>
+    
     <div *ngIf="user._id === currentUser._id && !canEditDes"><button (click)="allowEditDes()">Edit</button></div>
 
     <div *ngIf="canEditDes">
         <form (ngSubmit)="submitForm(form)">
           <div class="field">
-            <input type="text" name="description" [(ngModel)]="description"/>
+            <textarea type="text" name="description" [(ngModel)]="description"></textarea>
           </div>              
           <div class="field submit">
             <button type="submit">Submit change</button>
