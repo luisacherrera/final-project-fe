@@ -3,12 +3,13 @@
 </div>
 
 <div *ngIf="user">
-  <ul>
-    <li *ngFor="let message of user.messages">
-      <p>{{ message.owner.name }}</p>
-      <p>{{ message.message }}</p>
-    </li>
-  </ul>  
+
+  <div class="message-container" *ngFor="let message of user.messages">
+    <p>{{ message.owner.name }}</p>
+    <p>{{ message.message }}</p>
+    <a [routerLink]="['/users', message.owner._id]" (click)="hideMessages()">Go to user page</a>
+  </div>
+    
 </div>
 
 

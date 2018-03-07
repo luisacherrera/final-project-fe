@@ -43,4 +43,9 @@ export class UserProfilePageComponent implements OnInit {
     this.displayInfo = false;
   }
 
+  onClick() {
+    this.displayInfo = true;
+    this.displayMessages = false;
+  }
+
 }

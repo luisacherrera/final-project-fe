@@ -15,7 +15,8 @@
   </div>
 
   <app-user-info *ngIf="displayInfo && !displayMessages"></app-user-info>
-  <app-user-messages *ngIf="displayMessages && !displayInfo"></app-user-messages>
+  <app-user-messages *ngIf="user._id === currentUser._id && displayMessages && !displayInfo" 
+  (onClick)="onClick()"></app-user-messages>
 
 </div>
 

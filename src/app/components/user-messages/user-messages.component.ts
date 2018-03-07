@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { UsersService } from '../../services/users.service';
 import { AuthService } from '../../services/auth.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -9,6 +9,8 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./user-messages.component.css']
 })
 export class UserMessagesComponent implements OnInit {
+
+  @Output() onClick = new EventEmitter();
 
   user: any;
   userId: any;
@@ -29,6 +31,10 @@ export class UserMessagesComponent implements OnInit {
         this.user = user;
       })
     })
+  }
+
+  hideMessages() {
+    this.onClick.emit();
   }
 
 }

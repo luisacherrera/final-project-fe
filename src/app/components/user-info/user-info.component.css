@@ -17,7 +17,8 @@ button {
 }
 
 .user-interests {
-    text-transform: uppercase; 
+    text-transform: uppercase;
+    padding-bottom: 10px; 
 }
 
 ul {
