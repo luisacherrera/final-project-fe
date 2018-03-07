@@ -1,5 +1,5 @@
 button {
-    border: solid 3px rgb(38, 45, 56);
+    border: solid 3px rgb(188, 191, 196);
     border-radius: 50px;
     width: 100px;
     height: 100px;
@@ -7,12 +7,12 @@ button {
     font-size: 14px;
     font-weight: 800;
     background-color: inherit;
-    color: rgb(38, 45, 56);
+    color: rgb(188, 191, 196);
 }
 
 .background {
     margin-top: 83px;
-    background-image: url("http://www.tuitmagazine.com/contenido/wp-content/uploads/2014/09/jump1.png");
+    background-image: url("https://images.jg-cdn.com/image/7f2a5f4b-6ffb-4a06-b1d6-54bed2401e39.jpg?template=fundraisingpagegalleryxl");
     background-position: center;
     background-size: cover;
     filter: blur(3px);
